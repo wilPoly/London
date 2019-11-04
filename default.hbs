@@ -43,13 +43,14 @@
                 </div>
                 <div class="site-head-right">
                     <div class="social-links">
-                        {{#if @site.facebook}}
+                        {{!-- {{#if @site.facebook}}
                         <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">Facebook</a>
                         {{/if}}
                         {{#if @site.twitter}}
                         <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">Twitter</a>
-                        {{/if}}
-                        <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">RSS</a>
+                        {{/if}} --}}
+                        <a href="https://pixelfed.social/wilpoly" title="Pixelfed" target="_blank" rel="noopener">Illustrations</a>
+                        <a href="{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">RSS</a>
                     </div>
                 </div>
             </div>
@@ -88,11 +89,7 @@
 
     <script src="{{asset "built/swup.js"}}" data-swup-ignore-script></script>
     <script src="{{asset "built/infinitescroll.js"}}" data-swup-ignore-script></script>
-    <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
+    <script src="{{asset "js/jquery-3.2.1.min.js"}}"></script>
 
     <div id="swup">
         {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
